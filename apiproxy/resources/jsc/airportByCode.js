@@ -28,6 +28,7 @@ if (matching) {
   setNotFoundError();
 }
 
+
 /**
  * Set the 404 Not Found error as a response
  */
