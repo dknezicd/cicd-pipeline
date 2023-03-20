@@ -12,6 +12,12 @@ Feature: List of Airports
     When I GET /airports?limit=42
     Then response code should be 200
     And response body path $ should be of type array with length 42
+    
+    
+  Scenario: I should be able to limit the number of returned airports to 1
+    When I GET /airports?limit=1
+    Then response code should be 200
+    And response body path $ should be of type array with length 1
 
   Scenario: I should find all airports for a given country filter
     When I GET /airports?country=india
